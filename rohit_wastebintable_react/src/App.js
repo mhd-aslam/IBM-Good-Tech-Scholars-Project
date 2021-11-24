@@ -1,45 +1,43 @@
 import React from "react";
 import { db, auth } from "./firebase";
 
+class App extends React.Component {
+  state = {
+    bins: null,
+  };
 
-class App extends React.Component{
-  state = { 
-    bins: null
-  }
-
-  componentDidMount(){
-    db.collection('bins')
+  componentDidMount() {
+    db.collection("bins")
       .get()
-      .then(snapshot => {
-        const bins=[]
-        snapshot.forEach( doc => {
-          const data = doc.data()
-          bins.push(data)
-        })
-        this.setState({ bins: bins})
+      .then((snapshot) => {
+        const bins = [];
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          bins.push(data);
+        });
+        this.setState({ bins: bins });
         //console.log(snapshot)
-
       })
-      .catch( error => console.log(error))
+      .catch((error) => console.log(error));
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div className="App">
-        <h1>TABLE</h1>
-        {
-          this.state.bins &&
-          this.state.bins.map(bin =>{
-            return(
+        <h1>Waste Bin Table</h1>
+        {this.state.bins &&
+          this.state.bins.map((bin) => {
+            return (
               <div>
-                <p>{bin.fill} - {bin.percentage}</p>
+                <p>
+                  {bin.fill} - {bin.percentage}
+                </p>
               </div>
-            )
-          })
-        }
+            );
+          })}
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
