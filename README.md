@@ -2,7 +2,7 @@
 
 
 
-![version](https://img.shields.io/badge/version-1.10.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-dashboard-react.svg?maxAge=2592000)]() [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim/material-dashboard?utm_source=share-link&utm_medium=link&utm_campaign=share-link) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+![version](https://img.shields.io/badge/version-1.6.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-dashboard-react.svg?maxAge=2592000)]() [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim/material-dashboard?utm_source=share-link&utm_medium=link&utm_campaign=share-link) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
 ![Product Gif](src/assets/github/md-react.gif)
 
@@ -63,7 +63,7 @@ Quick start options:
 
 - `npm i material-dashboard-react`
 - Clone the repo: `git clone https://github.com/creativetimofficial/material-dashboard-react.git`.
-- [Download from Github](https://github.com/creativetimofficial/material-dashboard-react/archive/main.zip).
+- [Download from Github](https://github.com/creativetimofficial/material-dashboard-react/archive/master.zip).
 - [Download from Creative Tim](https://www.creative-tim.com/product/material-dashboard-react).
 
 
@@ -83,15 +83,9 @@ material-dashboard-react
 ├── LICENSE.md
 ├── README.md
 ├── bower.json
-├── gulpfile.js
-├── jsconfig.json
 ├── package.json
 ├── documentation
 │   ├── assets
-│   │   ├── css
-│   │   ├── img
-│   │   │   └── faces
-│   │   └── js
 │   └── tutorial-components.html
 ├── public
 │   ├── favicon.ico
@@ -103,10 +97,7 @@ material-dashboard-react
     ├── routes.js
     ├── assets
     │   ├── css
-    │   │   └── material-dashboard-react.css
     │   ├── github
-    │   │   ├── md-react.gif
-    │   │   └── react.svg
     │   ├── img
     │   │   └── faces
     │   └── jss
@@ -114,74 +105,74 @@ material-dashboard-react
     │       │   ├── components
     │       │   ├── layouts
     │       │   └── views
-    │       └── material-dashboard-react.js
+    │       └── material-dashboard-react.jsx
     ├── components
     │   ├── Card
-    │   │   ├── Card.js
-    │   │   ├── CardAvatar.js
-    │   │   ├── CardBody.js
-    │   │   ├── CardFooter.js
-    │   │   ├── CardHeader.js
-    │   │   └── CardIcon.js
+    │   │   ├── Card.jsx
+    │   │   ├── CardAvatar.jsx
+    │   │   ├── CardBody.jsx
+    │   │   ├── CardFooter.jsx
+    │   │   ├── CardHeader.jsx
+    │   │   └── CardIcon.jsx
     │   ├── CustomButtons
-    │   │   └── Button.js
+    │   │   └── Button.jsx
     │   ├── CustomInput
-    │   │   └── CustomInput.js
+    │   │   └── CustomInput.jsx
     │   ├── CustomTabs
-    │   │   └── CustomTabs.js
+    │   │   └── CustomTabs.jsx
     │   ├── FixedPlugin
-    │   │   └── FixedPlugin.js
+    │   │   └── FixedPlugin.jsx
     │   ├── Footer
-    │   │   └── Footer.js
+    │   │   └── Footer.jsx
     │   ├── Grid
-    │   │   ├── GridContainer.js
-    │   │   └── GridItem.js
+    │   │   ├── GridContainer.jsx
+    │   │   └── GridItem.jsx
     │   ├── Navbars
-    │   │   ├── AdminNavbarLinks.js
-    │   │   ├── Navbar.js
-    │   │   └── RTLNavbarLinks.js
+    │   │   ├── AdminNavbarLinks.jsx
+    │   │   ├── Navbar.jsx
+    │   │   └── RTLNavbarLinks.jsx
     │   ├── Sidebar
-    │   │   └── Sidebar.js
+    │   │   └── Sidebar.jsx
     │   ├── Snackbar
-    │   │   ├── Snackbar.js
-    │   │   └── SnackbarContent.js
+    │   │   ├── Snackbar.jsx
+    │   │   └── SnackbarContent.jsx
     │   ├── Table
-    │   │   └── Table.js
+    │   │   └── Table.jsx
     │   ├── Tasks
-    │   │   └── Tasks.js
+    │   │   └── Tasks.jsx
     │   └── Typography
-    │       ├── Danger.js
-    │       ├── Info.js
-    │       ├── Muted.js
-    │       ├── Primary.js
-    │       ├── Quote.js
-    │       ├── Success.js
-    │       └── Warning.js
+    │       ├── Danger.jsx
+    │       ├── Info.jsx
+    │       ├── Muted.jsx
+    │       ├── Primary.jsx
+    │       ├── Quote.jsx
+    │       ├── Success.jsx
+    │       └── Warning.jsx
     ├── layouts
-    │   ├── Admin.js
-    │   └── RTL.js
+    │   ├── Admin.jsx
+    │   └── RTL.jsx
     ├── variables
-    │   ├── charts.js
-    │   └── general.js
+    │   ├── charts.jsx
+    │   └── general.jsx
     └── views
         ├── Dashboard
-        │   └── Dashboard.js
+        │   └── Dashboard.jsx
         ├── Icons
-        │   └── Icons.js
+        │   └── Icons.jsx
         ├── Maps
-        │   └── Maps.js
+        │   └── Maps.jsx
         ├── Notifications
-        │   └── Notifications.js
+        │   └── Notifications.jsx
         ├── RTLPage
-        │   └── RTLPage.js
+        │   └── RTLPage.jsx
         ├── TableList
-        │   └── TableList.js
+        │   └── TableList.jsx
         ├── Typography
-        │   └── Typography.js
+        │   └── Typography.jsx
         ├── UpgradeToPro
-        │   └── UpgradeToPro.js
+        │   └── UpgradeToPro.jsx
         └── UserProfile
-            └── UserProfile.js
+            └── UserProfile.jsx
 ```
 
 ## Browser Support
@@ -213,8 +204,8 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Licensing
 
-- Copyright 2021 Creative Tim (https://www.creative-tim.com)
-- Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/main/LICENSE.md)
+- Copyright 2018 Creative Tim (https://www.creative-tim.com)
+- Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
 
 ## Useful Links
 
