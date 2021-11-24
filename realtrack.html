@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script>
+        var map_init = L.map('map', {
+            center: [10.054016519699735, 76.6195291427202],
+            zoom: 15
+        });
+        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map_init);
+
+       
+        
+       var marker1 = L.marker([10.0566799305576, 76.6172113326288]);
+       marker1.addTo(map_init);
+       var marker2 = L.marker([10.059688676170516, 76.61761067004964]);
+       marker2.addTo(map_init);
+       var marker3 = L.marker([10.053704491824897, 76.61333482708505]);
+       marker3.addTo(map_init);
+       var marker4 = L.marker([10.063825847272332, 76.62286438101755]);
+       marker4.addTo(map_init);
+       var marker5 = L.marker([10.063769443554637, 76.61152192804481]);
+       marker5.addTo(map_init);
+       var marker6 = L.marker([10.085823664444812, 76.6100679853016]);
+       marker6.addTo(map_init);
+       var marker7 = L.marker([10.02897949343635, 76.62633705627015]);
+       marker7.addTo(map_init);
+       var marker8 = L.marker([10.01237248577149, 76.68178946905732]);
+       marker8.addTo(map_init);
+       var marker9 = L.marker([10.047629010532852, 76.63479421438119]);
+       marker9.addTo(map_init);
+       var marker10 = L.marker([10.04551631909924, 76.64318466907768]);
+       marker10.addTo(map_init);
+       var marker10 = L.marker([10.052114616409956, 76.60904346374795]);
+       marker10.addTo(map_init);
+
+
+
+
+
+        L.Control.geocoder().addTo(map_init);
+        if (!navigator.geolocation) {
+            console.log("Your browser doesn't support geolocation feature!")
+        } else {
+            setInterval(() => {
+                navigator.geolocation.getCurrentPosition(getPosition)
+            }, 5000);
+        };
+        var marker, circle, lat, long, accuracy;
+
+        function getPosition(position) {
+            // console.log(position)
+            lat = position.coords.latitude
+            long = position.coords.longitude
+            accuracy = position.coords.accuracy
+
+            if (marker) {
+                map_init.removeLayer(marker)
+            }
+
+            if (circle) {
+                map_init.removeLayer(circle)
+            }
+
+            marker = L.marker([lat, long])
+            circle = L.circle([lat, long], { radius: accuracy })
+            
+            var featureGroup = L.featureGroup([marker, circle]).addTo(map_init)
+
+            map_init.fitBounds(featureGroup.getBounds())
+
+            console.log("Your coordinate is: Lat: " + lat + " Long: " + long + " Accuracy: " + accuracy)
+        }
+    </script>
+</body>
+
+</html>
